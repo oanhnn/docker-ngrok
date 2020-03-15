@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branchs:
+      - master
+      - develop
+  pull_request:
+    branchs:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build the Docker image
+        run: |
+          DOCKER_TAG=$(date +%Y%m%d%H%M)
+          docker build . --file Dockerfile --tag oanhnn/ngrok:$DOCKER_TAG
+          docker run --rm oanhnn/ngrok:$DOCKER_TAG ngrok --version
