@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'releases/*'
+  pull_request:
+    branches:
+      - 'master'
+
+env:
+  DOCKER_IMAGE: oanhnn/ngrok
+
+jobs:
+  build:
+    name: Build Docker image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Get the version
+        id: vars
+        run: |
+          echo ::set-output name=tag::$(echo ${GITHUB_SHA:8})
+
+      - name: Build the Docker image
+        run: |
+          docker build . --file Dockerfile --tag $DOCKER_IMAGE:${{steps.vars.outputs.tag}}
+          docker run --rm $DOCKER_IMAGE:${{steps.vars.outputs.tag}} ngrok --version
