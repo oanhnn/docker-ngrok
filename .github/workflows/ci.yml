@@ -6,6 +6,8 @@ on:
       - 'master'
       - 'develop'
       - 'releases/*'
+    tags:
+      - '*'
   pull_request:
     branches:
       - 'master'
@@ -24,9 +26,16 @@ jobs:
       - name: Get the version
         id: vars
         run: |
-          echo ::set-output name=tag::$(echo ${GITHUB_SHA:8})
+          echo ::set-output name=version::$(echo ${GITHUB_REF##*/})
 
-      - name: Build the Docker image
-        run: |
-          docker build . --file Dockerfile --tag $DOCKER_IMAGE:${{steps.vars.outputs.tag}}
-          docker run --rm $DOCKER_IMAGE:${{steps.vars.outputs.tag}} ngrok --version
+      - name: Build and push
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: oanhnn/ngrok
+          tag_with_ref: true
+          tag_with_sha: true
+          add_git_labels: true
+          labels: org.opencontainers.image.title=Ngrok,org.opencontainers.image.authors=oanhnn,org.opencontainers.image.licenses=MIT,org.opencontainers.image.version=${{steps.vars.outputs.version}}
+          push: ${{ startsWith(github.ref, 'refs/tags/') }}

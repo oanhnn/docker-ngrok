@@ -1,6 +1,6 @@
 # oanhnn/docker-ngrok
 
-[![Docker Automated build](https://img.shields.io/docker/automated/oanhnn/ngrok)](https://hub.docker.com/r/oanhnn/ngrok)
+[![Build Status](https://github.com/oanhnn/docker-ngrok/workflows/CI/badge.svg)](https://github.com/oanhnn/docker-ngrok/actions)
 [![Docker Build Status](https://img.shields.io/docker/build/oanhnn/ngrok)](https://hub.docker.com/r/oanhnn/ngrok)
 [![Docker Pulls](https://img.shields.io/docker/pulls/oanhnn/ngrok)](https://hub.docker.com/r/oanhnn/ngrok)
 [![Software License](https://img.shields.io/github/license/oanhnn/laravel-logzio.svg)](LICENSE)
@@ -54,7 +54,7 @@ If you would like to help take a look at the [list of issues](https://github.com
 ## License
 
 This project is released under the MIT License.   
-Copyright © 2018-2019 [Oanh Nguyen](https://github.com/oanhnn)   
+Copyright © [Oanh Nguyen](https://github.com/oanhnn)   
 Please see [License File](./LICENSE) for more information.
 
 
