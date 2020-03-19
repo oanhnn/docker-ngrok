@@ -1,9 +1,8 @@
 # oanhnn/docker-ngrok
 
 [![Build Status](https://github.com/oanhnn/docker-ngrok/workflows/CI/badge.svg)](https://github.com/oanhnn/docker-ngrok/actions)
-[![Docker Build Status](https://img.shields.io/docker/build/oanhnn/ngrok)](https://hub.docker.com/r/oanhnn/ngrok)
 [![Docker Pulls](https://img.shields.io/docker/pulls/oanhnn/ngrok)](https://hub.docker.com/r/oanhnn/ngrok)
-[![Software License](https://img.shields.io/github/license/oanhnn/laravel-logzio.svg)](LICENSE)
+[![Software License](https://img.shields.io/github/license/oanhnn/laravel-logzio.svg)][LICENSE]
 
 A [Docker][docker] image for [ngrok][ngrok] v2, introspected tunnels to localhost.
 The idea was originally inspired by the [wernight/ngrok][wernight/ngrok] image.
@@ -55,7 +54,7 @@ If you would like to help take a look at the [list of issues](https://github.com
 
 This project is released under the MIT License.   
 Copyright © [Oanh Nguyen](https://github.com/oanhnn)   
-Please see [License File](./LICENSE) for more information.
+Please see [License File][LICENSE] for more information.
 
 
 [docker]:           https://www.docker.io/
@@ -63,3 +62,4 @@ Please see [License File](./LICENSE) for more information.
 [ngrok-api]:        https://ngrok.com/docs#client-api
 [busybox]:          https://registry.hub.docker.com/_/busybox
 [wernight/ngrok]:   https://registry.hub.docker.com/u/wernight/ngrok/
+[LICENSE]:          https://github.com/oanhnn/docker-ngrok/blob/master/LICENSE
