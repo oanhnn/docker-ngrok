@@ -1,11 +1,12 @@
-# oanhnn/docker-ngrok
-
-[![Build Status](https://github.com/oanhnn/docker-ngrok/workflows/CI/badge.svg)](https://github.com/oanhnn/docker-ngrok/actions)
-[![Docker Pulls](https://img.shields.io/docker/pulls/oanhnn/ngrok)](https://hub.docker.com/r/oanhnn/ngrok)
-[![Software License](https://img.shields.io/github/license/oanhnn/docker-ngrok.svg)][LICENSE]
+# oanhnn/ngrok
 
 A [Docker][docker] image for [ngrok][ngrok] v2, introspected tunnels to localhost.
 The idea was originally inspired by the [wernight/ngrok][wernight/ngrok] image.
+
+[![Build Status](https://github.com/oanhnn/docker-ngrok/workflows/CI/badge.svg)](https://github.com/oanhnn/docker-ngrok/actions)
+[![Docker Pulls](https://img.shields.io/docker/pulls/oanhnn/ngrok.svg)](https://hub.docker.com/r/oanhnn/ngrok)
+[![Docker Stars](https://img.shields.io/docker/stars/oanhnn/ngrok.svg)](https://hub.docker.com/r/oanhnn/ngrok)
+[![Software License](https://img.shields.io/github/license/oanhnn/docker-ngrok.svg)][LICENSE]
 
 ## Features
 
